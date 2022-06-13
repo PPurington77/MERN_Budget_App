@@ -24,12 +24,12 @@ for(var i = 0; i < arr3.length; i++){
 }
 
 // Bonus
-var arr3 = [6, 2, 12, 14, -24, 5, 0];
-for(var i = 0; i < arr3.length; i++){
-    if(arr3[i]>5){
-        console.log(arr3[i])
+var arr4 = [6, 2, 12, 14, -24, 5, 0];
+for(var i = 0; i < arr4.length; i++){
+    if(arr4[i]>5){
+        console.log(arr4[i])
     }
-    else{
-        
+    else if (arr4[i] <= 5){
+        arr4[i] = "No dice"
     }
 }
