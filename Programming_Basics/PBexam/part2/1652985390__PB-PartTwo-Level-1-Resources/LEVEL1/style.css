@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* ADD A SANS SERIF DEFAULT FONT HERE */
+}
+
+body {
+    background-color: wheat;
+    /* CHANGE THE BACKGROUND COLOR TO WHEAT */
+}
+
+p,
+img {
+    margin-bottom: 20px;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: white;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    /* CHANGE THE BACKGROUND COLOR TO WHITE
+    AND ADD A LIGHT GREY BORDER ON THE LEFT AND RIGHT */
+}
+
+#header {
+    padding: 20px;
+    color: white;
+    background-color:#79b5f1;
+    /* CHANGE THE TEXT COLOR TO WHITE AND
+    THE BACKGROUND COLOR SHOULD BE #79b5f1 */
+}
+
+/*
+ASIDE AND MAIN MUST BE SIDE BY SIDE
+ADD THE CORRECT PROPERTIES TO THEIR RULE SETS
+*/
+
+aside {
+    width: 200px;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+main {
+    width: 640px;
+    padding: 20px;
+    display:inline-block
+}
+
+#nav {
+    list-style-type: none;
+    /* REMOVE THE BULLET POINTS */
+}
+
+#nav a {
+    text-decoration: none;
+    /* REMOVE THE UNDERLINES */
+}
