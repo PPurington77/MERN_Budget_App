@@ -1,4 +1,6 @@
-
+body{
+    width: 1000px;
+}
 img{
     height: 200px;
 }
@@ -12,6 +14,7 @@ h1{
 }
 .first, .sec, .third{
     text-align: center;
+    padding: 15px;
 }
 .first{
     background-color: rgb(209, 180, 156); margin: 15px;
@@ -21,7 +24,7 @@ h1{
 .sec{
     background-color: antiquewhite; margin: 15px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .third{
     background-color: bisque; margin: 15px;
