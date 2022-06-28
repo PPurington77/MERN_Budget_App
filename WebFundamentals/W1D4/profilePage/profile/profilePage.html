@@ -26,7 +26,7 @@
         <div id="left">
             <div id="main">
                 <div id="color"><img class="userpic" src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/jane-m.jpg" alt="userpic"></div>
-                <h2>Jane Doe</h2>
+                <h2 id="title">Jane Doe</h2>
                 <div id="location">
                     <img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/map-marker.png" alt="mark" class="mark">
                     <h3>Seattle</h3>
@@ -35,7 +35,7 @@
                 Master of shadows and the Internet!</p>
                 <div id="edit">
                     <img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/gear.png" alt="gear" class="gear">
-                    <a href="#">edit profile</a>
+                    <a onclick="changename()" href="#">edit profile</a>
                 </div>
             </div>
             <div id="edu">
@@ -50,38 +50,38 @@
         <div id="right">
             <div id="CR">
                 <h4 class="connection">
-                    <p>2</p>
+                    <p id="CRnum">2</p>
                     Connection Requests
                 </h4>
-                <div class="people">
+                <div id="people">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/todd-s.jpg" alt="Todd" class="pp">
                     <h5>Todd E</h5>
-                    <img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/accept-circle.png" alt="yes" class="yesno"><img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/close-circle.png" alt="close" class="yesno">
+                    <img onclick="accept(this)" src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/accept-circle.png" alt="yes" id="yes"><img onclick="hide(this)" src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/close-circle.png" alt="close" id="no">
                 </div>
-                <div class="people">
+                <div id="people2">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/phil-s.jpg" alt="Phil" class="pp">
                     <h5>Phil K</h5>
-                    <img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/accept-circle.png" alt="yes" class="yesno"><img src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/close-circle.png" alt="close" class="yesno">
+                    <img onclick="accept2(this)" src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/accept-circle.png" alt="yes" id="yes"><img onclick="hide2(this)" src="/WebFundamentals/W1D4/profilePage/1614282895__icons/icons/close-circle.png" alt="close" id="no">
                 </div>
             </div>
             <div id="YC">
                 <h4 class="Yconnection">
-                    <p>500+</p>
+                    <p id="connectnum">418</p>
                     Your Connections
                 </h4>
-                <div class="people">
+                <div class="YCpeople">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/adrien-s.jpg" alt="Adrien" class="pp">
                     <h5>Adrien D</h5>
                 </div>
-                <div class="people">
+                <div class="YCpeople">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/anne-s.jpg" alt="Anne" class="pp">
                     <h5>Anne J</h5>
                 </div>
-                <div class="people">
+                <div class="YCpeople">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/alayne-s.jpg" alt="Alayne" class="pp">
                     <h5>Alayne T</h5>
                 </div>
-                <div class="people">
+                <div class="YCpeople">
                     <img src="/WebFundamentals/W1D4/profilePage/1614265160__images/images/arry-s.jpg" alt="Arry" class="pp">
                     <h5>Arry Y</h5>
                 </div>
@@ -90,5 +90,6 @@
         </div>
     </div>
     
+<script src="./profile.js"></script>
 </body>
 </html>

@@ -111,11 +111,15 @@ h5{
     display: inline-block;
     font-size: 20px;
 }
-.people{
+#people, #people2{
     display: flex;
     align-items: center;
 }
-.yesno{
+.YCpeople{
+    display: flex;
+    align-items: center;
+}
+#yes, #no{
     height: 30px;
     margin: 2px;
     position: relative;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">Network</div>
+    <h2>Your Feed</h2>
+    <div class="container">
+        <div class="profile">
+            <img src="./user-circle.png" alt="user">
+            <a href="#">Add an avatar</a>
+            <h3>James Doe</h3>
+        </div>
+        <div class="people">
+            <div class="partone">
+                <div class="upper">
+                    <h1>Neil M</h1>
+                    <div class="num">
+                        <button onclick="addlike(0)" id="likebtn">Like</button>
+                        <p><span id="count">5</span> like(s)</p>
+                    </div>
+                </div>
+                <p class="text">I just set up this new discord bot, let me know what you all think.<a href="#">link</a></p>
+            </div>
+            <div class="parttwo">
+                <div class="upper">
+                    <h1>Nichole K</h1>
+                    <div class="num">
+                        <button onclick="addlike(1)" id="likebtn">Like</button>
+                        <p><span id="count2">2</span> like(s)</p>
+                    </div>
+                </div>
+                <p class="text">Just finished my <a href="#">next comic</a> ,check it out.</p>
+            </div>
+            <div class="partthree">
+                <div class="upper">
+                    <h1>Jim R</h1>
+                    <div class="num">
+                        <button onclick="addlike(2)" id="likebtn">Like</button>
+                        <p><span id="count3">8</span> like(s)</p>
+                    </div>
+                </div>
+                <p class="text">I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="likes.js"></script>
+</body>
+</html>

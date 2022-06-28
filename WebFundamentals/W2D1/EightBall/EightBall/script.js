@@ -24,6 +24,7 @@ function getAnswer() {
     var output = document.querySelector("#answer")
     console.log(output);
     output.innerText = lifesAnswers[Math.floor(Math.random()*lifesAnswers.length)];
+    
     var image = document.querySelector("#ball")
     image.setAttribute("src", "ball.gif");
     replace();
