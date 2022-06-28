@@ -1,0 +1,104 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.btn{
+    color:rgb(18,155,157) ;
+    font-family:monospace;
+    font-weight:bold;
+    font-size: 15px;
+    background-color: rgb(245,245,245);
+    border: 1px solid rgb(18,155,157);
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+.row{
+    color: whitesmoke;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col{
+    flex:1;
+    background-color: rgb(101,157,161);
+    margin: 5px;
+}
+.col-2{
+    flex: 2;
+    background-color: rgb(101,157,161);
+    margin: 5px;
+}
+.navbar{
+    background-color: rgb(129, 122, 122);
+    color: whitesmoke;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    margin-left: 600px;
+}
+li{
+    margin-right: 20px;
+    list-style-type: none;
+}
+a{
+    color: whitesmoke;
+}
+.btn-2{
+    background-color: rgba(218, 187, 167, 0.658); color: whitesmoke;
+    padding: 3px 15px;
+    box-shadow: 3px 3px 3px black;
+    border:2px solid black;
+}
+.learning{
+    position: relative;
+    top:20px;
+    left: 20px;
+    background-color: bisque;
+    width: 500px;
+    height: 500px;
+}
+.box1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: 0.5;
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    opacity: 0.5;
+    position: absolute;
+    bottom:50px;
+    right:100px;
+}
+.box3{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    top: 200px;
+    left:200px;
+}

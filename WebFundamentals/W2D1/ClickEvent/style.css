@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+body{
+    font-family: monospace;
+}
+.header{
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 20px;
+}
+.main{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+h1{
+    font-size: 40px;
+    position: absolute;
+    left: 10px;
+}
+.headersearch{
+    border: 2px solid black;
+    box-shadow: 1px 1px black;
+    width: 500px;
+    height: 30px;
+    margin-left: 250px;
+}
+.loginbtn{
+    width: 60px;
+    height: 25px;
+    background-color: rgb(43,120,228);
+    color: whitesmoke;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+.container{
+    display: inline-block;
+    margin-right: 60px;
+}
+.firstbox{
+    width: 500px;
+    height: 250px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+.firstbox-left, .secondbox-left{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    padding: 20px;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.noun{
+    font-size: 20px;
+}
+p, span{
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.firstbox-right, .secondbox-right{
+    display: inline-block;
+    position: relative;
+    top: -90px;
+    right: -50px;
+    width: 60%;
+
+}
+.secondbox{
+    width: 500px;
+    height: 250px;
+    border: 2px solid black;
+}
+.like{
+    margin-top: 70px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    background-color: rgb(255,217,102);
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+.sidedbox{
+    width: 270px;
+    height: 180px;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid black;
+    vertical-align: top;
+}
+h4{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.addbtn{
+    width: 260px;
+    height: 40px;
+    background-color: rgb(147,196,125);
+    box-shadow: 2px 2px black;
+}
