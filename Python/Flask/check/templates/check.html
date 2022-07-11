@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/checkboard.css') }}"
+</head>
+
+<body>
+    <table>
+    {% for i in range(num1): %}
+        <tr>
+        {% for j in range(num2): %}
+            {% if (i+j)%2+1 == 1 %}
+            <th class="color1" style="background-color:{{color1}} ;"></th> <!-- either 1 or 2 -->
+            {% else %}
+            <th class="color2" style="background-color:{{color2}} ;"></th>
+            {% endif %}
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+    
+
+</body>
+</html>

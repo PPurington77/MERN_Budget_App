@@ -1,0 +1,11 @@
+.color1{
+    background-color: yellow;
+    height: 40px;
+    width: 40px;
+}
+.color2{
+    background-color:green;
+    height: 40px;
+    width: 40px;
+}
+/* {{(i+j)%2+1}} */
