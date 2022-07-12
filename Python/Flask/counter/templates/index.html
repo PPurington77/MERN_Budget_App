@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }} -->
-    <link rel="stylesheet" href="/Python/Flask/counter/static/style.css">
-    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"
+
 </head>
 <body>
     <div class="container">
         <h1>Counter</h1>
         <div class="time">
-            <h2>1</h2><P>time(s)</P>
+            <div class="counter">
+                <p>Actual</p><h2>{{ session.counter }}</h2><P>time(s)</P>
+            </div>
+            <div class="counter">
+                <p>Given</p><h2>{{ session.given }}</h2><P>time(s)</P>
+            </div>
         </div>
-    <button class="addtwo">Add 2 visits!</button> <button class="reset">Reset</button>
+        <a href="/addtwo"><button class="addtwo">Add 2 visits!</button></a> <a href="/reset"><button class="reset">Reset both</button></a>
+    
+        <div class="bonus">
+            <form action="/addnum" method="post">
+                <label for="number">How many times u want to increase?</label>
+                <input type="number" name="number" id="number">
+                <button>Add!</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

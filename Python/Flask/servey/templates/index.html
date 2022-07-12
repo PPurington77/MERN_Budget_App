@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/process" method="post">
+            <h1>Dojo Survey</h1>
+            <div class="each">
+                <label for="name">Name:</label>
+                    <input type="text" name="name">
+            </div>
+            <div class="each">
+                <label for="location">Location:</label>
+                    <select name="location" id="location">
+                        <option value="option">--Please choose an option--</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="New York">New york</option>
+                        <option value="Online">Online</option>
+                    </select>
+            </div>
+            <div class="each">
+                <label for="language">Favorite language:</label>
+                    <select name="language" id="language">
+                        <option value="option">--Please choose an option--</option>
+                        <option value="Python">Python</option>
+                        <option value="Js">Js</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">C++</option>
+                    </select>
+            </div>
+            <div class="each">
+                <label for="comment">Comments(optional):</label><br>
+                <textarea name="comment" id="textarea" cols="60" rows="8"></textarea><br>
+                
+                <p>How old are you:</p>
+                <input type="radio" name="age" value="under 15">
+                <label for="age">under 15</label>
+                <input type="radio" name="age" value="16-30">
+                <label for="age">16-30</label>
+                <input type="radio" name="age" value="30+">
+                <label for="age">30+</label>
+                
+                <p>I want to receive more info:</p>
+                <input type="checkbox" name="check" value="Yes">
+                <label for="check">YES</label>
+
+                <div class="btn">
+                    <input class="submit" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
