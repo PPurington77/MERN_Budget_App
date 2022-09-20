@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { Budget } = require('./budget.model');
 //name, category, price
 const ExpenseSchema = new mongoose.Schema(
     {
@@ -16,7 +17,9 @@ const ExpenseSchema = new mongoose.Schema(
         cost: {
             type: Number,
             required: [true, 'Cost is required']
-        }
+        },
+
+        budgetName: Budget.name
     },
     {timestamps: true}
 );
