@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import {
   deleteOneById,
+	getBudgetById,
   getAll,
 	create,
 } from '../services/internalApiService';
 
-export const AllExpenses = (props) => {
+
+export const ShowBudget = (props) => {
 	const navigate = useNavigate();
 
   const [expenses, setExpenses] = useState([]);
@@ -17,7 +19,13 @@ export const AllExpenses = (props) => {
 	const [cost, setCost] = useState("")
 	const [errors, setErrors] = useState(null);
 
+	const { id } = useParams();
+
   useEffect(() => {
+		getBudgetById(id)
+			.then((data)=>{
+				console.log(data)
+			})
     getAll()
       .then((data) => {
         setExpenses(data);
@@ -25,7 +33,7 @@ export const AllExpenses = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, [expenses]);
+  }, []);
 
 
 	const handleAddExpenseSubmit =(e) =>{
@@ -40,7 +48,7 @@ export const AllExpenses = (props) => {
 		create(newExpense)
 			.then((data) => {
 				console.log('new expense:', data);
-				navigate('/expense');
+				navigate(`/budgets/${id}`);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -67,12 +75,6 @@ export const AllExpenses = (props) => {
       });
   };
 
-	// const getProgressBar =(nums) =>{
-	// 	if(nums/100< 0.5) return "primary"
-	// 	if(nums/100< 0.75) return "warning"
-	// 	return "danger"
-	// }
-
   return (
     <div className="container p-3 w-60 mx-auto text-center">
 			<div className="d-flex justify-content-center">
@@ -93,9 +95,6 @@ export const AllExpenses = (props) => {
 				</div>
 			</div>
 				<Link to={"/"} className="btn btn-sm btn-outline-success mb-3">Back to all Budget</Link>
-			{/* <div className="progress">
-				<div className="progress-bar" role="progressbar" variant={getProgressBar(amount)} aria-valuenow={nums} aria-valuemin="0" aria-valuemax="100"></div>
-			</div> */}
 			<div>
 				<h3>All Expenses</h3>
 				{expenses.map((expense) => {
@@ -120,6 +119,7 @@ export const AllExpenses = (props) => {
 				})}
 			</div>
 			<hr/>
+
 			<div>
 				<form onSubmit={(e) => handleAddExpenseSubmit(e)}>
 					<div className="form-group">
@@ -167,4 +167,4 @@ export const AllExpenses = (props) => {
   );
 };
 
-export default AllExpenses;
+export default ShowBudget;

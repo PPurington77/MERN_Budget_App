@@ -1,6 +1,23 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
+import {
+		getAllBudgets,
+	} from '../services/internalApiService';
 
 export const Home = (props) =>{
+	const [budgets, setBudgets] = useState([]);
+
+	useEffect(() => {
+    getAllBudgets()
+      .then((data) => {
+        console.log(data);
+        setBudgets(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
 	return (
 		<div>
@@ -13,11 +30,17 @@ export const Home = (props) =>{
 					<div className="card">
 						<div className="card-body">
 							<h5 className="card-title">Current Budgets</h5>
-							<p className="card-text">...</p>
-							<p className="card-text">...</p>
-							<p className="card-text">...</p>
-							<Link to={"/expenses"}> test</Link>
-							<Link to={"/budget/new"} className="btn btn-sm btn-outline-success">Create a new budget</Link>
+							{budgets.map((budget) =>{
+								return (
+									<div key={budget._id}>
+										<Link to={`/budgets/${budget._id}`}>
+											<h4>{budget.name}</h4>
+										</Link>
+									</div>
+								)
+							})}
+
+							<Link to={"/budgets/new"} className="btn btn-sm btn-outline-success">Create a new budget</Link>
       			</div>
     			</div>
   			</div>
