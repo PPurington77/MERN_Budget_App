@@ -12,17 +12,12 @@ const ExpenseSchema = new mongoose.Schema(
 
         category: {
             type: String,
-            required: [true, 'Category is required']
+            required: false
         },
 
         cost: {
             type: Number,
-            required: [true, 'Cost is required']
-        },
-
-        budgetName: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Budget"
+            required: false
         }
     },
     {timestamps: true}
