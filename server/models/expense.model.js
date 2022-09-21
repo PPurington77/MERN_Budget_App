@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+
 //name, category, price
 const ExpenseSchema = new mongoose.Schema(
     {
@@ -10,12 +12,12 @@ const ExpenseSchema = new mongoose.Schema(
 
         category: {
             type: String,
-            required: [true, 'Category is required']
+            required: false
         },
 
         cost: {
             type: Number,
-            required: [true, 'Cost is required']
+            required: false
         }
     },
     {timestamps: true}
