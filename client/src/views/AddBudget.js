@@ -9,6 +9,7 @@ export const AddBudget = (props) => {
 
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
+  const [expense, setExpense] = useState([]);
 
   const [errors, setErrors] = useState(null);
 
@@ -18,6 +19,7 @@ export const AddBudget = (props) => {
     const newBudget = {
       name,
       amount,
+      expense
     };
 
     createBudget(newBudget)

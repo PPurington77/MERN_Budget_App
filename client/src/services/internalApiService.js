@@ -28,7 +28,10 @@ export const getOneById = async (id) => {
   return res.data;
 };
 export const getBudgetById = async (id) => {
+  console.log('**********', id);
   const res = await http.get(`/budgets/${id}`);
+  console.log(res.data, 'aaaaaaaaaaaaaaaaaaaa');
+  console.log('0000000000000')
   return res.data;
 };
 

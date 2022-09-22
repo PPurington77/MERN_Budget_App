@@ -12,28 +12,26 @@ import {
 
 export const ShowBudget = (props) => {
 	const navigate = useNavigate();
-
-  const [expenses, setExpenses] = useState([]);
+	
+	const [budget, setBudget] = useState(null);
+    const [expenses, setExpenses] = useState([]);
 	const [name, setName] = useState("")
 	const [category, setCategory] = useState(null)
 	const [cost, setCost] = useState("")
 	const [errors, setErrors] = useState(null);
-
+	
 	const { id } = useParams();
 
-  useEffect(() => {
+    useEffect(() => {
 		getBudgetById(id)
 			.then((data)=>{
-				console.log(data)
+				console.log(data, 'dataaaaa')
+				setBudget(data);
 			})
-    getAll()
-      .then((data) => {
-        setExpenses(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+			.catch((error) => {
+				console.log(error);
+			});
+		}, [id]);
 
 
 	const handleAddExpenseSubmit =(e) =>{
@@ -42,18 +40,19 @@ export const ShowBudget = (props) => {
 		const newExpense ={
 			name,
 			category,
-			cost,
+			cost
 		};
 
-		create(newExpense)
+		create(id, newExpense)
 			.then((data) => {
 				console.log('new expense:', data);
-				navigate(`/budgets/${id}`);
+				navigate(`/budgets/${id}/create`);
 			})
 			.catch((error) => {
 				console.log(error);
 				setErrors(error?.response?.data?.errors);
 			});
+			
 		
 		setName("")
 		setCategory(null)
@@ -75,9 +74,11 @@ export const ShowBudget = (props) => {
       });
   };
 
+
   return (
     <div className="container p-3 w-60 mx-auto text-center">
 			<div className="d-flex justify-content-center">
+				<h1>Hello, { id }</h1>
 				<div className="card bg-light mb-3 ml-3">
 					<div className="card-body">
 						<h5 className="card-title">Budget:</h5>

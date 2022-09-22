@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/budgets/create" element={ <Navigate to ='/budgets/:id' replace />} />
         <Route path="/budgets/:id" element={<ShowBudget />} />
         <Route path="/budgets/new" element={<AddBudget />} />
       </Routes>

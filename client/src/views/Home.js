@@ -33,7 +33,7 @@ export const Home = (props) =>{
 							{budgets.map((budget) =>{
 								return (
 									<div key={budget._id}>
-										<Link to={`/budgets/${budget._id}`}>
+										<Link to={`/budgets/${ budget._id }`}>
 											<h4>{budget.name}</h4>
 										</Link>
 									</div>
