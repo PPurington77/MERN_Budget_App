@@ -6,6 +6,7 @@ import {
   deleteOneById,
 	getBudgetById,
   getAll,
+	getOneById,
 	create,
 } from '../services/internalApiService';
 
@@ -21,19 +22,28 @@ export const ShowBudget = (props) => {
 
 	const { id } = useParams();
 
+
   useEffect(() => {
 		getBudgetById(id)
 			.then((data)=>{
 				console.log(data)
+				console.log(data.expense,"0000000000000000000000")
+				getOneById(data.expense)
+					.then((data) => {
+						console.log(data,"**********************");
+						setExpenses(data);
+						console.log(expenses)
+					})
 			})
-    getAll()
-      .then((data) => {
-        setExpenses(data);
-      })
+			// getAll()
+			// 	.then((data) => {
+			// 		setExpenses(data);
+			// 		console.log(data,"--------------------------")
+			// 	})
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id,expenses]);
 
 
 	const handleAddExpenseSubmit =(e) =>{
@@ -46,7 +56,8 @@ export const ShowBudget = (props) => {
 		};
 
 		create(newExpense)
-			.then((data) => {
+		.then((data) => {
+				console.log(data)
 				console.log('new expense:', data);
 				navigate(`/budgets/${id}`);
 			})
