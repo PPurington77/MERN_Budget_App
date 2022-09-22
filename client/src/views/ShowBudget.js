@@ -14,8 +14,7 @@ import {
 export const ShowBudget = (props) => {
 	const navigate = useNavigate();
 	
-	const [budget, setBudget] = useState(null);
-    const [expenses, setExpenses] = useState([]);
+  const [expenses, setExpenses] = useState([]);
 	const [name, setName] = useState("")
 	const [category, setCategory] = useState(null)
 	const [cost, setCost] = useState("")
@@ -28,23 +27,24 @@ export const ShowBudget = (props) => {
 		getBudgetById(id)
 			.then((data)=>{
 				console.log(data)
-				console.log(data.expense,"0000000000000000000000")
-				getOneById(data.expense)
-					.then((data) => {
-						console.log(data,"**********************");
-						setExpenses(data);
-						console.log(expenses)
-					})
+				setExpenses(data.expense)
+				console.log(expenses,"22222222222222222")
 			})
+			// getOneById(id)
+			// 	.then((data) => {
+			// 		console.log(data,"33333333333333333");
+			// 		setExpenses(data);
+			// 		console.log(expenses)
+			// 	})
 			// getAll()
 			// 	.then((data) => {
 			// 		setExpenses(data);
-			// 		console.log(data,"--------------------------")
+			// 		console.log(data,"0000000000000000")
 			// 	})
       .catch((error) => {
         console.log(error);
       });
-  }, [id,expenses]);
+  }, [id]);
 
 
 	const handleAddExpenseSubmit =(e) =>{
@@ -60,7 +60,7 @@ export const ShowBudget = (props) => {
 		.then((data) => {
 				console.log(data)
 				console.log('new expense:', data);
-				navigate(`/budgets/${id}/create`);
+				navigate(`/budgets/${id}`);
 			})
 			.catch((error) => {
 				console.log(error);
